@@ -1,10 +1,10 @@
 create schema clinic;
 
 create table clinic.patient(
-    id 			bigserial primary key,
-    full_name 		text not null,
-    birthdate 		date,
-    phone_number 	character varying(11) unique 
+    	id 		bigserial primary key,
+    	full_name 	text not null,
+    	birthdate 	date,
+    	phone_number 	character varying(11) unique 
 );
 
 create table clinic.position_doctor(
