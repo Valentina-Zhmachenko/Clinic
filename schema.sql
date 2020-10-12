@@ -31,8 +31,8 @@ create table clinic.doctor(
 	department_id 	int,	
 	full_name 	text not null,
 	phone_number 	int unique not null,
-	constraint fk_position foreign key(position_id) references clinic.position_doctor(id),
-    constraint fk_department foreign key(department_id) references clinic.department(id)
+	constraint fk_position   foreign key(position_id)   references clinic.position_doctor(id),
+    	constraint fk_department foreign key(department_id) references clinic.department(id)
 );
 
 create table clinic.doctor_visit(
@@ -42,7 +42,7 @@ create table clinic.doctor_visit(
 	service_id 	int,
 	visit_date 	date not null,
 	price 		money not null,
-	constraint fk_doctor foreign key(doctor_id) references clinic.doctor(id),
+	constraint fk_doctor  foreign key(doctor_id)  references clinic.doctor(id),
 	constraint fk_patient foreign key(patient_id) references clinic.patient(id),
-    constraint fk_service foreign key(service_id) references clinic.service(id)
+    	constraint fk_service foreign key(service_id) references clinic.service(id)
 );
